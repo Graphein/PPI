@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Travis Scott - Detalhes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/JavaScript/scripts.js" defer></script>
+</head>
+<body class="center">
+    <div class="container text-center">
+        <h1>Show do Travis Scott - Rock in Rio</h1>
+        <img src="./img/SHOW TRAVIS.png" alt="Show do Travis Scott" class="img-fluid mb-4">
+        
+        <p><strong>Prepare-se para uma noite inesquecível com Travis Scott no Rock in Rio!<br>No dia 13 de setembro, às 00:00, o renomado rapper e produtor musical subirá ao palco para apresentar um show incrível que destacará seu mais recente álbum, "Utopia".<br>
+        Travis Scott, conhecido por suas performances energéticas e visuais impressionantes, irá interpretar uma seleção de faixas do aclamado álbum "Utopia", incluindo:</p>
+        
+        <ol class="list-unstyled">
+            <li><strong>HYAENA</strong></li>
+            <li><strong>THANK GOD</strong></li>
+            <li><strong>MODERN JAM</strong></li>
+            <li><strong>Aye</strong></li>
+            <li><strong>BUTTERFLY EFFECT</strong></li>
+            <li><strong>Can't Say</strong></li>
+            <li><strong>Type Shit</strong></li>
+            <li><strong>Til Further Notice ( 21 Savage )</strong></li>
+            <li><strong>FE!N (16 VEZES)</strong></li>
+        </ol>
+        
+        <p><strong>Com participação do 21 Savage!</strong></p>
+        <p><strong>Data: 13 de Setembro</strong></p>
+        <p><strong>Local: Rock in Rio</strong></p>
+        <p><strong>Horário: 00:00</strong></p>
+        
+        <img src="./img/21 savage.png" alt="Show do Travis Scott" class="img-fluid mb-4">
+        
+        <p><strong>Preço: R$ <span id="preco">450.00</span></strong></p>
+        <p><strong>Ingressos disponíveis: 500</strong></p>
+        
+        <!-- Formulário de compra de ingressos -->
+        <form id="comprar-ingressos">
+            <div class="form-group">
+                <label for="quantidade"><strong>Quantidade de Ingressos:</strong></label>
+                <input type="number" class="form-control" id="quantidade" name="quantidade" min="1" max="500">
+            </div>
+            <p><strong>Total: R$ <span id="total">0.00</span></strong></p>
+            <button type="button" class="btn btn-primary" id="comprar-btn">Comprar</button>
+            <p><strong>Não perca a chance de vivenciar ao vivo um dos shows mais esperados do Rock in Rio!</strong></p>
+        </form>
+    </div>
+
+    <!-- Script para calcular o total e redirecionar -->
+    <script>
+        document.getElementById('comprar-btn').addEventListener('click', function() {
+            // Capturar a quantidade de ingressos
+            const quantidadeIngressos = document.getElementById('quantidade').value;
+            
+            // Verificar se a quantidade de ingressos foi selecionada
+            if (quantidadeIngressos <= 0) {
+                alert('Por favor, selecione uma quantidade válida de ingressos.');
+                return;
+            }
+            
+            // Armazenar a quantidade de ingressos no localStorage
+            localStorage.setItem('quantidadeIngressos', quantidadeIngressos);
+
+            // Redirecionar para a página de cadastro
+            window.location.href = 'cadastro.html';
+        });
+
+        // Script para atualizar o valor total
+        const precoIngresso = 450.00;
+        document.getElementById('quantidade').addEventListener('input', function() {
+            const quantidade = this.value;
+            const total = precoIngresso * quantidade;
+            document.getElementById('total').innerText = total.toFixed(2);
+        });
+    </script>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
