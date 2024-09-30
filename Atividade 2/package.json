@@ -1,0 +1,14 @@
+{
+  "name": "atividade-2",
+  "version": "1.0.0",
+  "description": "Início de desenvolvimento do backend para o sistema de vendas de ingressos online (evento)",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
+}

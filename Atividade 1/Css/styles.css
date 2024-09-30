@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+.center
+{
+
+    text-align: center;
+}
+#eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.evento {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+@media (max-width: 768px) {
+    #eventos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evento {
+        width: 90%;
+    }
+}
+.imagem-evento {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    display: block;
+    margin: 20px auto; 
+}
+.lista-sem-numeracao {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0;
+}

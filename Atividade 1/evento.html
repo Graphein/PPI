@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show do Travis Scott - Detalhes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/JavaScript/scripts.js" defer></script>
+</head>
+<body class="center">
+    <h1>Show do Travis Scott - Rock in Rio</h1>
+    <img src="/img/SHOW TRAVIS.png" alt="Show do Travis Scott" class="imagem-evento">
+    <p><strong>Descrição do Evento:</strong></p>
+    <p><strong>Prepare-se para uma noite inesquecível com Travis Scott no Rock in Rio!<br>No dia 13 de setembro, às 00:00, o renomado rapper e produtor musical subirá ao palco para apresentar um show incrível que destacará seu mais recente álbum, "Utopia".<br>
+    Travis Scott, conhecido por suas performances energéticas e visuais impressionantes, irá interpretar uma seleção de faixas do aclamado álbum "Utopia", incluindo:</p>
+    <ol class="lista-sem-numeracao">
+        <li><strong>HYAENA</strong></li>
+        <li><strong>THANK GOD</strong></li>
+        <li><strong>MODERN JAM</strong></li>
+        <li><strong>Aye</strong></li>
+        <li><strong>BUTTERFLY EFFECT</strong></li>
+        <li><strong>Can't Say</strong></li>
+        <li><strong>Type Shit</strong></li>
+        <li><strong>Til Further Notice ( 21 Savage )</strong></li>
+        <li><strong>FE!N (16 VEZES)</strong></li>
+    </ol>
+    <p><strong>Com participação do 21 Savage!</strong></p>
+    
+    <p><strong>Data: 13 de Setembro</strong></p>
+    <p><strong>Local: Rock in Rio</strong></p>
+    <p><strong>Horário: 00:00</strong></p>
+    <img src="/img/21 savage.png" alt="Show do Travis Scott" class="imagem-evento">
+    <p><strong>Horário: 21:45</strong></p>
+    <p><strong>Preço: R$ <span id="preco">450.00</span></strong></p>
+    <p><strong>Ingressos disponíveis: 500</strong></p>
+
+    <form id="comprar-ingressos" action="/comprar" method="POST">
+        <label for="quantidade"><strong>Quantidade de Ingressos:</strong></label>
+        <input type="number" id="quantidade" name="quantidade" min="1" max="500">
+        <p><strong> R$ <span id="total">0.00</span></strong></p>
+        <button type="submit">Comprar</button>
+        <p><strong>Não perca a chance de vivenciar ao vivo um dos shows mais esperados do Rock in Rio!</p>
+    </form>
+</body>
+</html>
