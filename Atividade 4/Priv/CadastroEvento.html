@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Eventos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Css/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Travis Scott</h1>
+        <br>
+        <h2 class="letra">São Paulo - Allianz Parque ( 10 - 08 - 2024 )</h2>
+        <h2 class="letra">Rio de Janeiro - Rock in Rio ( 13 - 08 - 2024 )</h2>
+
+        <form id="event-form">
+            <div class="form-group">
+                <label for="name">Nome do Cliente:</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" class="form-control" id="cpf" required>
+            </div>
+            <div class="form-group">
+                <label for="show-name">Nome do Show:</label>
+                <input type="text" class="form-control" id="show-name" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Data:</label>
+                <input type="date" class="form-control" id="date" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+        
+        <div id="feedback" class="mt-3" style="display: none;"></div> <!-- Inicialmente escondido -->
+
+        <h2 class="mt-5">Eventos Cadastrados</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>CPF</th>
+                    <th>Nome do Show</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="event-table-body">
+                <!-- Registros de eventos aparecerão aqui -->
+                <tr>
+                    <td>Eduardo Leli Faria</td>
+                    <td>456.631.258-50</td>
+                    <td>Rio de Janeiro - Rock in Rio</td>
+                    <td>2024-08-13</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editEvent(this)">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteEvent(this)">Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Luzia</td>
+                    <td>117.325.343-25</td>
+                    <td>Rio de Janeiro - Rock in Rio</td>
+                    <td>2024-08-13</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editEvent(this)">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteEvent(this)">Deletar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Biel</td>
+                    <td>656.661.558-10</td>
+                    <td>São Paulo - Allianz Parque</td>
+                    <td>2024-08-10</td>
+                    <td>
+                        <button class="btn btn-warning btn-sm" onclick="editEvent(this)">Editar</button>
+                        <button class="btn btn-danger btn-sm" onclick="deleteEvent(this)">Deletar</button>
+                    </td>
+                </tr>
+                <td>Lipe</td>
+                <td>136.251.958-47</td>
+                <td>São Paulo - Allianz Parque</td>
+                <td>2024-08-10</td>
+                <td>
+                    <button class="btn btn-warning btn-sm" onclick="editEvent(this)">Editar</button>
+                    <button class="btn btn-danger btn-sm" onclick="deleteEvent(this)">Deletar</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

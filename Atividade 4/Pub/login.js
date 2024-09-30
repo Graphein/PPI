@@ -5,9 +5,9 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const password = document.getElementById('password').value;
 
     // Autenticação simples (substitua por lógica de autenticação real, se necessário)
-    if (username === 'admin' && password === '12345') {
+    if (username === 'Eduardo' && password === '12345') {
         // Se login for bem-sucedido, redireciona para a página de cadastro
-        window.location.href = 'index.html';
+        window.location.href = 'CadastroEvento.html';
     } else {
         // Exibe mensagem de erro
         document.getElementById('loginError').style.display = 'block';

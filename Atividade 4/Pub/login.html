@@ -30,6 +30,9 @@
                     <input type="password" class="form-control" id="senha" required>
                 </div>
                 <button type="button" class="btn btn-primary w-100" id="login-btn">Entrar</button>
+                <br>
+                <br>
+                <a href="CadastroSite.html" class="btn btn-primary w-100" id="login-btn">Cadastrar</a>
             </form>
         </div>
     </div>
@@ -45,7 +48,7 @@
             if (usuario === nomeSalvo && senha === senhaSalva) {
                 alert('Login bem-sucedido!');
                 // Redirecionar para a página principal após o login
-                window.location.href = 'evento.html';
+                window.location.href = '/Priv/CadastroEvento.html';
             } else {
                 alert('Usuário ou senha incorretos.');
             }
