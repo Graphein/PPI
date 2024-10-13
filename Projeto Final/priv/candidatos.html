@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Candidatos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/candidatos.js" defer></script> <!-- Inclui o arquivo JavaScript -->
+</head>
+<body class="bg-light">
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Cadastro de Candidatos</h1>
+    <form id="cadastroCandidatoForm" class="card p-4 shadow-sm">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome do Candidato</label>
+        <input type="text" class="form-control" id="nome" name="nome" required>
+      </div>
+      <div class="mb-3">
+        <label for="partido" class="form-label">Partido</label>
+        <select class="form-select" id="partido-select" name="partido" required>
+          <option value="1">...</option>
+          <option value="1">FER</option>
+          <option value="2">BLJ</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="numeroCandidato" class="form-label">Número do Candidato</label>
+        <input type="number" class="form-control" id="numeroCandidato" name="numeroCandidato" required>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Cadastrar Candidato</button>
+    </form>
+    
+    <!-- Div para mostrar mensagens de feedback -->
+    <div id="feedback" style="display:none; margin-top: 15px;"></div>
+    
+    <a href="candidatosLista.html" class="btn btn-info mt-3">Ver Lista de Candidatos</a> 
+    <a href="menu.html" class="btn btn-secondary mt-3">Voltar ao Menu</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
